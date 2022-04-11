@@ -9,6 +9,22 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
+  <header id="header">
+  <div class="wrapper">
+    <p class="logo"><a href="/">SAMPLE</a></p>
+    <nav>
+      <ul>
+        
+        <% if user_signed_in? %>
+        <li><%= button_to 'サインアウト', destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li><%= button_to 'サインイン', new_user_session_path, method: :get %></li>
+        <li><%= button_to 'サインアップ', new_user_registration_path, method: :get %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>
 
   <body>
     <%= yield %>
