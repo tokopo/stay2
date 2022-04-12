@@ -1,0 +1,11 @@
+<%= form_with model: @room, local: true do |f| %>
+
+  #中略
+      <div class="form-group">
+        <label class="text-secondary">画像</label><br>
+        <%= f.file_field :image %>
+      </div>
+      <div class="actions1">
+      <%= f.submit "送る" %>
+      </div>
+  <% end %>

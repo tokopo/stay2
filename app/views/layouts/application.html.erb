@@ -16,6 +16,7 @@
       <ul>
         
         <% if user_signed_in? %>
+        <li><%= current_user.name %></li>
         <li><%= button_to 'サインアウト', destroy_user_session_path, method: :delete %></li>
         <% else %>
         <li><%= button_to 'サインイン', new_user_session_path, method: :get %></li>

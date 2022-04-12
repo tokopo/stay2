@@ -4,4 +4,25 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name]) # 新規登録時(sign_up時)にnameというキーのパラメーターを追加で許可する
   end
+
+  private
+  # ログイン後のリダイレクト先
+  def after_sign_in_path_for(resource_or_scope)
+    home_top_path    
+  end
+
+  # ログアウト後のリダイレクト先
+  def after_sign_out_path_for(resource_or_scope)
+    new_user_session_path
+  end
+
+  #アカウント登録後のリダイレクト先
+ def after_sign_up_path_for(resource)
+    home_top_path
+end
+
+#アカウント編集後のリダイレクト先
+def after_update_path_for(resource)
+    home_top_path 
+end
 end
