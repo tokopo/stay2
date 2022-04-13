@@ -10,7 +10,7 @@ class RoomsController < ApplicationController
 
   def create
     @recipe = Room.new(room_params)
-    if @room.save
+    if @room.save!
       redirect_to room_path(@room) #リダイレクト先をshowに変更
     else
       render :new
