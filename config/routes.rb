@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/profile'
   resources :rooms
   get 'home/top'
   devise_for :users
@@ -6,4 +7,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :lives do
+    get :search, on: :collection
+  end
 end

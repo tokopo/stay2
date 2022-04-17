@@ -13,3 +13,118 @@
  *= require_tree .
  *= require_self
  */
+
+ body{
+	font-size: 1em;
+	line-height: 1.6em;
+	background-color: #efefef;
+	color: #333;
+}
+a{
+	color: #fff;
+	text-decoration: none;
+}
+a:hover{
+	color: #444;
+	background-color: #efefef;
+}
+.content{
+	width: 980px;
+	margin: 0 auto;
+	padding: 60px 40px;
+	background-color: #fff;
+}
+h1{
+	margin-bottom: 2em;
+	font-size: 1.6em;
+	text-align: center;
+}
+h2{
+	margin-bottom: 1em;
+	font-size: 1.3em;
+}
+
+/* Menu */
+
+header{
+	margin-bottom: 13em;
+	position: relative;
+	width: 100%;
+	background-color: #444;
+}
+ul > li{
+	display: inline-block;
+}
+ul > li > a{
+	padding: 15px 30px;
+	display: block;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+}
+ul > li > span{
+	margin-left: 1.2em;
+}
+ul > li:hover > a{
+	background-color: #efefef;
+	color: #444;
+}
+
+/* Submenu */
+
+ul li ul{
+	position: absolute;
+	top: 55px;
+	left: 0;
+}
+ul li ul li{
+	display: block;
+}
+ul li ul li a{
+	background-color: #efefef;
+	color: #444;
+}
+ul li ul li a:hover{
+	background-color: #ddd;
+}
+
+/*	Sample01
+------------------------------------------*/
+
+.sample01 ul li ul{
+	display: none;
+}
+.sample01 ul li:hover ul{
+	display: block;
+}
+
+/*	Sample02
+------------------------------------------*/
+
+.sample02 ul li ul li{
+	height: 0;
+	overflow: hidden;
+
+}
+.sample02 ul li:hover ul li{
+	height: auto;
+	overflow: visible;
+}
+
+/*	Sample03
+------------------------------------------*/
+
+.sample03 ul li ul{
+	position: absolute;
+	top: -1000px;
+}
+.sample03 ul li:hover ul{
+	top: 55px;
+}
+/*.sample03 ul li:hover ul{
+	transform: translateY(1055px);
+	-ms-transform: translateY(1055px);
+}*/
+/*.sample03 ul li ul{
+	transition: .5s ease-in-out;
+}*/

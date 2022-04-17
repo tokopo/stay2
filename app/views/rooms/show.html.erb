@@ -1,19 +1,18 @@
 <div class="text-center">
   <div class="card room-card ">
-    <%= image_tag @room.image, class: "card-img-top" if @recipe.image.attached? %>
+    <%= image_tag @room.image, class: "card-img-top" if @room.image.attached? %>
     <div class="card-body">
       <div class="room-name">
         <%= @room.title %>
       </div>
       <div class="room-content">
-        カテゴリー: <span class="room-category"><%= @room.category.name %></span>
-        所要時間: <span class="room-time"><%= @room.time_required.name %></span>
+
       </div>
       <hr>
       <p class="card-text">
         <div class="room-title">作り方</div>
         <div class="room-text d-flex justify-content-start">
-          <%= safe_join(@room.text.split("\n"),tag(:br)) %>
+          
         </div>
       </p>
     </div>

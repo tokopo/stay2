@@ -17,6 +17,20 @@
         
         <% if user_signed_in? %>
         <li><%= current_user.name %></li>
+        <header class="sample01">
+    <ul>
+        <li><a href="#">Menu01 <span>▼</span></a>
+            <ul>
+                <li><a href="#">Sub-menu01</a></li>
+                <li><a href="#">Sub-menu02</a></li>
+                <li><a href="#">Sub-menu03</a></li>
+                <li><a href="#">Sub-menu04</a></li>
+                <li><a href="#"><%= button_to 'サインアウト', destroy_user_session_path, method: :delete %></a></li>
+                <li><%= button_to 'サインアウト', destroy_user_session_path, method: :delete %></li>
+            </ul>
+        </li>
+    </ul>
+</header>
         <li><%= button_to 'サインアウト', destroy_user_session_path, method: :delete %></li>
         <% else %>
         <li><%= button_to 'サインイン', new_user_session_path, method: :get %></li>

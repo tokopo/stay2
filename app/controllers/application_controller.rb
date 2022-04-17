@@ -8,7 +8,11 @@ class ApplicationController < ActionController::Base
   private
   # ログイン後のリダイレクト先
   def after_sign_in_path_for(resource_or_scope)
-    home_top_path    
+    if request.referrer.include?("sign_up")
+      users_profile_path
+    else
+      home_top_path
+    end 
   end
 
   # ログアウト後のリダイレクト先
@@ -17,12 +21,12 @@ class ApplicationController < ActionController::Base
   end
 
   #アカウント登録後のリダイレクト先
- def after_sign_up_path_for(resource)
-    home_top_path
-end
+  def after_sign_up_path_for(resource)
+    users_profile_path
+  end
 
-#アカウント編集後のリダイレクト先
-def after_update_path_for(resource)
-    home_top_path 
-end
+  #アカウント編集後のリダイレクト先
+  def after_update_path_for(resource)
+    users_profile_path
+  end
 end
