@@ -47,7 +47,7 @@ h2{
 /* Menu */
 
 header{
-	margin-bottom: 13em;
+	/* todo: delete margin-bottom: 13em; */
 	position: relative;
 	width: 100%;
 	background-color: #444;
@@ -121,10 +121,52 @@ ul li ul li a:hover{
 .sample03 ul li:hover ul{
 	top: 55px;
 }
-/*.sample03 ul li:hover ul{
-	transform: translateY(1055px);
-	-ms-transform: translateY(1055px);
-}*/
-/*.sample03 ul li ul{
-	transition: .5s ease-in-out;
-}*/
+
+
+
+
+/*----- #TODO: user情報ページ用スタイル -----*/
+.user_main {
+  display: flex;
+}
+
+.main {
+  width: 100%;
+}
+
+/*----- #TODO: side_nav用スタイル -----*/
+.side {
+  width: 20vw;
+  padding: 24px 30px;
+  order: -1;
+}
+.side_nav ul {
+  display: flex;
+  padding-left: 0;
+  flex-direction: column;
+}
+.side_nav ul > li {
+  flex-basis: 20%;
+  max-width: 174px;
+}
+.side_nav a {
+  color: #333;
+  font-size: 1em;
+  text-decoration: none;
+  position: relative;
+  line-height: 1.5
+}
+.side_nav a.active {
+    color: #4a90e2;
+}
+.side_nav a.active:after {
+  content: '';
+  position: absolute;
+  top: auto;
+  bottom: auto;
+  right: 12px;
+  display: inline-block;
+  width: 3px;/*線の太さ*/
+  height: 1.5em;/*線の長さ*/
+  background-color: #4a90e2;/*線の色*/
+}
