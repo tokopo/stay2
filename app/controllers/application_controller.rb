@@ -11,7 +11,8 @@ class ApplicationController < ActionController::Base
     if request.referrer.include?("sign_up")
       users_profile_path
     else
-      home_top_path
+      root_path
+      
     end 
   end
 
