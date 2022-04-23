@@ -170,3 +170,11 @@ ul li ul li a:hover{
   height: 1.5em;/*線の長さ*/
   background-color: #4a90e2;/*線の色*/
 }
+
+
+/* 写真 */
+
+.card-img-top {
+  width: 300px
+  
+}
