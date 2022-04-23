@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  check_date: MyString
+  name: MyString
+  start_at: 2022-04-23 17:14:16
+  end_at: 2022-04-23 17:14:16
+  note: MyString
+  use_date: 1
+  money: 1
+  people: 1
+  totalmoney: 1
+
+two:
+  check_date: MyString
+  name: MyString
+  start_at: 2022-04-23 17:14:16
+  end_at: 2022-04-23 17:14:16
+  note: MyString
+  use_date: 1
+  money: 1
+  people: 1
+  totalmoney: 1

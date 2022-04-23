@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_21_014617) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_23_081416) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -37,6 +37,34 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_21_014617) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "checks", force: :cascade do |t|
+    t.string "check_date"
+    t.string "name"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.string "note"
+    t.integer "use_date"
+    t.integer "money"
+    t.integer "people"
+    t.integer "totalmoney"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reserves", force: :cascade do |t|
+    t.string "reserve_date"
+    t.string "name"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.string "note"
+    t.integer "use_date"
+    t.integer "money"
+    t.integer "people"
+    t.integer "totalmoney"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "rooms", force: :cascade do |t|

@@ -1,0 +1,30 @@
+<h1>予約フォーム</h1>
+
+<ol class="nav">
+	<li>1.入力</li>
+	<li class="current">2.確認</li>
+	<li>3.完了</li>
+</ol>
+
+<dl>
+	<dt>希望日</dt>
+	<dd><%= @check.check_date %></dd>
+	<dt>名前</dt>
+	<dd><%= @check.name %></dd>
+	<dt>備考</dt>
+	<dd><%= @check.note %></dd>
+</dl>
+
+<%= form_for @check, method: :post, url: check_back_path do |form| %>
+	<%= form.hidden_field :check_date %>
+	<%= form.hidden_field :name %>
+	<%= form.hidden_field :note %>
+	<%= form.submit '入力画面に戻る' %>
+<% end %>
+
+<%= form_for @check, method: :post, url: check_complete_path do |form| %>
+	<%= form.hidden_field :check_date %>
+	<%= form.hidden_field :name %>
+	<%= form.hidden_field :note %>
+	<%= form.submit '送信する' %>
+<% end %>

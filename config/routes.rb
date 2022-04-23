@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
+
+  get 'check/new' # 入力画面
+post 'check/confirm' # 確認画面
+post 'check/back' # 確認画面から「入力画面に戻る」をクリックしたとき
+post 'check/complete' # 完了画面
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
