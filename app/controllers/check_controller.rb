@@ -25,7 +25,7 @@ class CheckController < ApplicationController
 	private
 
 	def permit_params
-		@attr = params.require('check').permit(:id, :check_date, :name, :note)
+		@attr = params.require('check').permit(:id, :check_date, :start_at, :end_at, :people)
 	end
 
 end

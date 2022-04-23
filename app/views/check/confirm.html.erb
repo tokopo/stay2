@@ -7,24 +7,24 @@
 </ol>
 
 <dl>
-	<dt>希望日</dt>
-	<dd><%= @check.check_date %></dd>
-	<dt>名前</dt>
-	<dd><%= @check.name %></dd>
-	<dt>備考</dt>
-	<dd><%= @check.note %></dd>
+	<dt>開始日</dt>
+	<dd><%= @check.start_at %></dd>
+	<dt>終了日</dt>
+	<dd><%= @check.end_at %></dd>
+	<dt>人数</dt>
+	<dd><%= @check.people %></dd>
 </dl>
 
 <%= form_for @check, method: :post, url: check_back_path do |form| %>
-	<%= form.hidden_field :check_date %>
-	<%= form.hidden_field :name %>
-	<%= form.hidden_field :note %>
+	<%= form.hidden_field :start_at %>
+	<%= form.hidden_field :end_at %>
+	<%= form.hidden_field :people %>
 	<%= form.submit '入力画面に戻る' %>
 <% end %>
 
 <%= form_for @check, method: :post, url: check_complete_path do |form| %>
-	<%= form.hidden_field :check_date %>
-	<%= form.hidden_field :name %>
-	<%= form.hidden_field :note %>
+	<%= form.hidden_field :start_at %>
+	<%= form.hidden_field :end_at %>
+	<%= form.hidden_field :people %>
 	<%= form.submit '送信する' %>
 <% end %>
