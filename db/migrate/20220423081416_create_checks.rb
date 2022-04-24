@@ -10,7 +10,7 @@ class CreateChecks < ActiveRecord::Migration[7.0]
       t.integer :money
       t.integer :people
       t.integer :totalmoney
-
+      t.references :room, foreign_key: true
       t.timestamps
     end
   end

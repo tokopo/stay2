@@ -19,14 +19,14 @@
 	<p class="reservations-new-check-content">上記内容でよろしければ「予約を確定」を押してください</p>
 </dl>
 
-<%= form_for @check, method: :post, url: check_back_path do |form| %>
+<%= form_for @check, method: :get, url: back_checks_path do |form| %>
 	<%= form.hidden_field :start_at %>
 	<%= form.hidden_field :end_at %>
 	<%= form.hidden_field :people %>
 	<%= form.submit '入力画面に戻る' %>
 <% end %>
 
-<%= form_with model: @check, method: :post, url: check_complete_path do |form| %>
+<%= form_with model: @check, method: :post, url: checks_path do |form| %>
 	<%= form.hidden_field :start_at, :value => @check.start_at %>
 	<%= form.hidden_field :end_at, :value => @check.end_at %>
 	<%= form.hidden_field :people, :value => @check.people %>

@@ -1,5 +1,5 @@
 <%= form_with model: @room, local: true do |f| %>
-
+  
         <%= f.label :ルーム名 %>
         <%= f.text_field :title %>
 
@@ -20,3 +20,6 @@
       <%= f.submit "送る" %>
       </div>
   <% end %>
+  <%= flash[:alert] %>
+
+ 

@@ -49,8 +49,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_23_081416) do
     t.integer "money"
     t.integer "people"
     t.integer "totalmoney"
+    t.integer "room_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_checks_on_room_id"
   end
 
   create_table "reserves", force: :cascade do |t|
@@ -93,4 +95,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_23_081416) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "checks", "rooms"
 end
