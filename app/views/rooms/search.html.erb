@@ -1,0 +1,19 @@
+<h1>部屋 search</h1>
+<%= form_with url: search_rooms_path, method: :get, local: true do |f| %>
+  <%= f.text_field :live %>
+  <%= f.submit :search %>
+<% end %>
+<table>
+  <thead>
+    <tr>
+      <th>Live</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @rooms.each do |room| %>
+      <tr>
+        <td><%= room.live %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

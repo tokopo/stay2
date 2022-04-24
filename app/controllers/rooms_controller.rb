@@ -21,6 +21,14 @@ class RoomsController < ApplicationController
     end
   end
 
+  def search
+    if params[:live].present?
+      @rooms = Room.where('live LIKE ?', "%#{params[:live]}%")
+    else
+      @rooms = Room.none
+    end
+  end
+
 
 
   private

@@ -5,8 +5,7 @@
 	<li>2.確認</li>
 	<li>3.完了</li>
 </ol>
-
-<%= form_for @check, method: :post, url: check_confirm_path do |form| %>
+<%= form_for @check, method: :get, url: check_confirm_path do |form| %>
 	<dl>
 		<dt>開始日</dt>
     <%= form.date_field :start_at %>
