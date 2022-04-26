@@ -3,6 +3,8 @@
   <div class="user_main">
     <div class="main">
       <h1>プロフィール</h1>
+    <%= image_tag @user.image, class: "card-img-top" if @user.image.attached? %>
+
       <label class="text-secondary">画像</label><br>
           <%= f.file_field :image %>
   
