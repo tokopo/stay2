@@ -1,12 +1,15 @@
 class ChecksController < ApplicationController
 
   # before_action :permit_params, except: [:new ]
+	def index
+    @checks = Check.all
+  end
 
 	def new
 		@room = Room.find(permit_params[:room_id])
 		@check = Check.new(permit_params)
 		@check.use_date = (@check.end_at - @check.start_at) / 1.day
-		@check.totalmoney = @check.people * @room.money * @check.use_date #@check.money
+		@check.totalmoney = @check.people * @room.money * @check.use_date 
 		if @check.invalid?	
 			render :new
 		end

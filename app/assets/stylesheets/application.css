@@ -14,16 +14,17 @@
  *= require_self
  */
 
+
  body{
 	font-size: 1em;
 	line-height: 1.6em;
 	background-color: #efefef;
 	color: #333;
 }
-a{
+/* a{
 	color: #fff;
 	text-decoration: none;
-}
+} */
 a:hover{
 	color: #444;
 	background-color: #efefef;
@@ -50,7 +51,7 @@ header{
 	/* todo: delete margin-bottom: 13em; */
 	position: relative;
 	width: 100%;
-	background-color: #444;
+	background-color:#444444c7;
 }
 ul > li{
 	display: inline-block;
@@ -171,6 +172,9 @@ ul li ul li a:hover{
   background-color: #4a90e2;/*線の色*/
 }
 
+.tokyo{
+	color:black !important;
+}
 
 /* 写真 */
 
@@ -178,3 +182,12 @@ ul li ul li a:hover{
   width: 300px
   
 }
+
+.picture{
+	width: 300px	
+}
+
+
+
+
+

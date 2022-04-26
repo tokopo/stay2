@@ -30,7 +30,7 @@
 </ol>
 <%= form_for @check, method: :get, url: new_check_path do |form| %>
 	<dl>
-    $<%= @room.money %> 	
+    ¥<%= @room.money %> 	
 		<dt>開始日</dt>
     <%= form.date_field :start_at %>
     <dt>終了日</dt>

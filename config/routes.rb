@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
-  resources :checks, only: [:new, :create, :show] do
+  resources :checks, only: [:index, :new, :create, :show] do
     get :confirm, on: :collection
     get :back, on: :collection
     get :complete, on: :collection
