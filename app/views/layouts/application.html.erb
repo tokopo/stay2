@@ -16,7 +16,9 @@
       <ul>
         
         <% if user_signed_in? %>
-        <%= image_tag @user.image, class: "card-img-top2" if @user.image.attached? %>
+      
+ <%= image_tag current_user.image, class: "card-img-top2" if current_user.image.attached? %>  
+
         <li><%= current_user.name %></li>
         <header class="sample01">
     <ul>
